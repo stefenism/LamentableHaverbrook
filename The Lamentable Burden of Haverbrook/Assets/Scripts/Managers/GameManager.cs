@@ -2,24 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(StatAffector))]
 public class GameManager : MonoBehaviour {
 
 	public static GameManager gameDaddy = null;
-	private StatAffector statAffector;
 
 	//STATS
-	private float Suspicion;
-	private float Happiness;
-	private float Population;
-	private float Fanatacism;
-	private float Hunger;
-
-	private float SuspicionTarget;
-	private float HappinessTarget;
-	private float PopulationTarget;
-	private float FanaticismTarget;
-	private float HungerTarget;
+	private float Suspicion = 50;
+	private float Happiness = 50;
+	private float Population = 50;
+	private float Fanatacism = 50;
+	private float Hunger = 50;
 
 	// Use this for initialization
 	void Awake () 
@@ -34,32 +26,19 @@ public class GameManager : MonoBehaviour {
 
 		//Keep our GameDaddy 4 E-V-E-R
 		DontDestroyOnLoad(gameObject);
-
-		gameDaddy.statAffector = GetComponent<StatAffector>();
+		
 	}
-	
+
 	public float getSuspicion(){return gameDaddy.Suspicion;}
 	public float getHappiness(){return gameDaddy.Happiness;}
 	public float getPopulation(){return gameDaddy.Population;}
 	public float getFanatacism(){return gameDaddy.Fanatacism;}
 	public float getHunger(){return gameDaddy.Hunger;}
 
-	public void setSuspicion(float newSuspicion){Suspicion = newSuspicion;}
-	public void setHappiness(float newHappiness){Happiness = newHappiness;}
-	public void setPopulation(float newPopulation){Population = newPopulation;}
-	public void setFanaticism(float newFanaticism){Fanatacism = newFanaticism;}
-	public void setHunger(float newHunger){Hunger = newHunger;}
+	public void setSuspicion(float newSuspicion){Suspicion = Mathf.Clamp(Suspicion + newSuspicion, 0, 100);}
+	public void setHappiness(float newHappiness){Happiness = Mathf.Clamp(Happiness + newHappiness, 0, 100);}
+	public void setPopulation(float newPopulation){Population = Mathf.Clamp(Population + newPopulation, 0, 100);}
+	public void setFanaticism(float newFanaticism){Fanatacism = Mathf.Clamp(Fanatacism + newFanaticism, 0, 100);}
+	public void setHunger(float newHunger){Hunger = Mathf.Clamp(Hunger + newHunger, 0, 100);}
 
-	public void setSupsicionTarget(float target){SuspicionTarget = target;}
-	public void setHappinessTarget(float target){HappinessTarget = target;}
-	public void setPopulationTarget(float target){PopulationTarget = target;}
-	public void setFanaticismTarget(float target){FanaticismTarget = target;}
-	public void setHungerTarget(float target){HungerTarget = target;}
-
-	public float getSuspicionTarget(){return SuspicionTarget;}
-	public float getHappinessTarget(){return HappinessTarget;}
-	public float getPopulationTarget(){return PopulationTarget;}
-	public float getFanatacismTarget(){return FanaticismTarget;}
-	public float getHungerTarget(){return HungerTarget;}
-	
 }
