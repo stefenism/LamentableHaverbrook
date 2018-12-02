@@ -38,8 +38,9 @@ public class ChoiceButton : Button {
 
     public virtual void pressButton()
     {
-        if(!changeSuspicion && !changeHappiness && !changePopulation && !changeFanatacism && !changeHunger)
-            return;
+        Debug.Log("press button");
+        /* if(!changeSuspicion && !changeHappiness && !changePopulation && !changeFanatacism && !changeHunger)
+            return; */
 
         if(changeSuspicion)        
             GameManager.gameDaddy.setSuspicion(suspicionValue);        

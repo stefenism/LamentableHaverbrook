@@ -36,6 +36,8 @@ public class ChoiceCard : MonoBehaviour {
 			c.interactable = false;
 			c.Invoke("reEnableButton", timeValue);
 		}
+
+		Debug.Log("button pressed choice");
 	}
 
 	public bool isLevelOne(){return cardLevel == CardLevel.ONE;}

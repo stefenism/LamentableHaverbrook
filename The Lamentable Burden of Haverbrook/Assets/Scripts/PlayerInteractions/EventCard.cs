@@ -51,6 +51,7 @@ public class EventCard : ChoiceCard {
 		base.buttonPressed(timeValue, clickedButton);
 		GameManager.gameDaddy.restoreTime();
 		anim.SetBool("close", true);
+		Debug.Log("pressed event");
 		//Destroy(this.gameObject);
 	}
 
