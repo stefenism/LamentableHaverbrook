@@ -20,6 +20,7 @@ public class Building : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
 
 	public Sprite idleImage;
 	public Sprite highlightedImage;
+
 	// Use this for initialization
 	void Awake () 
 	{
@@ -42,7 +43,8 @@ public class Building : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
 				drawer.initialize();				
 			}
 			drawer.gameObject.SetActive(true);
-			setBuildingOpen();			
+			setBuildingOpen();		
+			EventManager.eventMomma.checkDraw();	
 
 		}			
 	}

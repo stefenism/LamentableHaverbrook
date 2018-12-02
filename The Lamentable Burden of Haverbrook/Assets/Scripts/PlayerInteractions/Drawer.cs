@@ -8,6 +8,8 @@ public class Drawer : MonoBehaviour {
 	private Animator anim;	
 	private Building building;
 
+	public List<EventCard> availableEvents = new List<EventCard>();
+	public List<EventCard> spentEvents = new List<EventCard>();
 	// Use this for initialization
 	void Awake () 
 	{
@@ -36,4 +38,5 @@ public class Drawer : MonoBehaviour {
 	{
 		this.gameObject.SetActive(false);
 	}
+	
 }
