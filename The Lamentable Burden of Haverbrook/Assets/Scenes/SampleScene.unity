@@ -274,6 +274,11 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114322476800596750, guid: 28dd056f66851484980f5d2b7b363eb2,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1291142459}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28dd056f66851484980f5d2b7b363eb2, type: 2}
   m_IsPrefabAsset: 0
@@ -1015,7 +1020,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1147674964}
-  - component: {fileID: 1147674963}
   - component: {fileID: 1147674962}
   m_Layer: 0
   m_Name: GameManager
@@ -1036,17 +1040,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1900307361}
---- !u!114 &1147674963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1147674961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eab7748eb29fe1946b20a122b507abc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1147674964
 Transform:
   m_ObjectHideFlags: 0
@@ -1489,6 +1482,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 270d51d27b25a6141bd9101dbadf65b2, type: 2}
   m_IsPrefabAsset: 0
+--- !u!95 &1291142459 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95023047145562110, guid: 28dd056f66851484980f5d2b7b363eb2,
+    type: 2}
+  m_PrefabInternal: {fileID: 93829906}
 --- !u!1001 &1443021194
 Prefab:
   m_ObjectHideFlags: 0
