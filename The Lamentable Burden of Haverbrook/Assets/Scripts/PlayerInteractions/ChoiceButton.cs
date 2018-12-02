@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 [ExecuteInEditMode]
 public class ChoiceButton : Button {
-
+    
     //[Header("change These Values")]
     [HideInInspector]
     public bool changeSuspicion, changeHappiness, changePopulation, changeFanatacism, changeHunger;
