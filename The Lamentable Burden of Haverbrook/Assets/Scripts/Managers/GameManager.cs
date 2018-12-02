@@ -5,7 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
 	public static GameManager gameDaddy = null;
+	public Canvas canvas;
 
+	private Drawer currentDrawer;
 	//STATS
 	private float Suspicion = 50;
 	private float Happiness = 50;
@@ -40,5 +42,14 @@ public class GameManager : MonoBehaviour {
 	public void setPopulation(float newPopulation){Population = Mathf.Clamp(Population + newPopulation, 0, 100);}
 	public void setFanaticism(float newFanaticism){Fanatacism = Mathf.Clamp(Fanatacism + newFanaticism, 0, 100);}
 	public void setHunger(float newHunger){Hunger = Mathf.Clamp(Hunger + newHunger, 0, 100);}
+
+	public void setCurrentDrawer(Drawer newDrawer)
+	{
+		currentDrawer = newDrawer;
+	}
+
+	public Drawer getCurrentDrawer(){return currentDrawer;}
+
+	public void closeCurrentDrawer(){gameDaddy.currentDrawer.closeDrawer();}
 
 }
