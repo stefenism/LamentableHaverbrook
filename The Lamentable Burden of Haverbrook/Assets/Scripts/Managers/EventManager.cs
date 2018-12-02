@@ -82,7 +82,7 @@ public class EventManager : MonoBehaviour {
 		if(newEvent == null)
 			return;
 
-		EventCard eventClone = Instantiate(newEvent) as EventCard;
+		EventCard eventClone = Instantiate(newEvent) as EventCard;		
 		eventClone.transform.parent = GameManager.gameDaddy.canvas.transform;
 		eventClone.initialize();
 

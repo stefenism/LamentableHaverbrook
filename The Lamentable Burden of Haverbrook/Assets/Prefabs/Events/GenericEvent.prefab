@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 114697128570714452}
   - component: {fileID: 223357801302457568}
   - component: {fileID: 114284978798318962}
+  - component: {fileID: 95699919874147728}
   m_Layer: 0
   m_Name: GenericEvent
   m_TagString: Untagged
@@ -206,6 +207,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &95699919874147728
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338575330112706}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c25136f20e7609b4fba31128ba0c77f3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114038992612975348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -400,8 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardLevel: 0
-  defaultChoices: []
-  advancedChoices: []
+  anim: {fileID: 0}
   ID: 
 --- !u!114 &114294872515591306
 MonoBehaviour:
@@ -1032,7 +1050,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 14, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 3500, y: 2000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224160442580728644
 RectTransform:
