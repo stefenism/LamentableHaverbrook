@@ -79,6 +79,17 @@ public class Drawer : MonoBehaviour {
 		}
 	}
 
+	public void enableLevelThreeCards()
+	{
+		foreach(ChoiceCard c in choiceCards)
+		{
+			if(c.isLevelThree())
+			{
+				c.gameObject.SetActive(true);
+			}
+		}
+	}
+
 	public Animator getAnimator()
 	{
 		return anim;
