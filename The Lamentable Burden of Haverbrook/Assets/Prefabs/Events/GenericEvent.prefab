@@ -512,17 +512,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   tooltipText: 
-  changeSuspicion: 1
-  changeHappiness: 1
-  changePopulation: 1
-  changeFanatacism: 1
-  changeHunger: 1
-  suspicionValue: 15
-  happinessValue: 15
-  populationValue: 15
-  fanatacismValue: 15
-  hungerValue: 15
-  timeValue: 3
+  changeSuspicion: 0
+  changeHappiness: 0
+  changePopulation: 0
+  changeFanatacism: 0
+  changeHunger: 0
+  suspicionValue: 0
+  happinessValue: 0
+  populationValue: 0
+  fanatacismValue: 0
+  hungerValue: 0
+  timeValue: 0
 --- !u!114 &114583270598395914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -717,17 +717,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   tooltipText: 
-  changeSuspicion: 1
-  changeHappiness: 1
-  changePopulation: 1
-  changeFanatacism: 1
-  changeHunger: 1
-  suspicionValue: 15
-  happinessValue: 15
-  populationValue: 15
-  fanatacismValue: 15
-  hungerValue: 15
-  timeValue: 3
+  changeSuspicion: 0
+  changeHappiness: 0
+  changePopulation: 0
+  changeFanatacism: 0
+  changeHunger: 0
+  suspicionValue: 0
+  happinessValue: 0
+  populationValue: 0
+  fanatacismValue: 0
+  hungerValue: 0
+  timeValue: 0
 --- !u!114 &114630472336933618
 MonoBehaviour:
   m_ObjectHideFlags: 1
