@@ -14,7 +14,7 @@ public class ChoiceButton : Button {
     public float suspicionValue, happinessValue, populationValue, fanatacismValue, hungerValue, timeValue;
 	
 
-    public void pressButton()
+    public virtual void pressButton()
     {
         if(!changeSuspicion && !changeHappiness && !changePopulation && !changeFanatacism && !changeHunger)
             return;
@@ -38,7 +38,7 @@ public class ChoiceButton : Button {
         Invoke("reEnableButton", timeValue);
     }
 
-    public void reEnableButton()
+    public virtual void reEnableButton()
     {
         this.enabled = true;
     }
