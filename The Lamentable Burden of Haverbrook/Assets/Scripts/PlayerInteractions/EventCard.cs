@@ -49,13 +49,19 @@ public class EventCard : ChoiceCard {
 	public override void buttonPressed(float timeValue, ChoiceButton clickedButton)
 	{
 		base.buttonPressed(timeValue, clickedButton);
+		GameManager.gameDaddy.restoreTime();
 		anim.SetBool("close", true);
 		//Destroy(this.gameObject);
 	}
 
 	public void animClose()
-	{
+	{		
 		Destroy(this.gameObject);
+	}
+
+	public void eventSpawned()
+	{
+		GameManager.gameDaddy.freezeTime();
 	}
 
 	public string getID(){return ID;}

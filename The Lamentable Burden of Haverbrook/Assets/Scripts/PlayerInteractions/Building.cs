@@ -72,6 +72,9 @@ public class Building : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
 
 	public void closeBuilding()
 	{
+		/* if(EventSystem.current.IsPointerOverGameObject())
+			return; */
+
 		setSprite(idleImage);
 		setBuildingIdle();
 	}
