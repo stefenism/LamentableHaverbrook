@@ -12,9 +12,7 @@ public class ChoiceCard : MonoBehaviour {
 		THREE,
 	}
 
-	public CardLevel cardLevel = CardLevel.ONE;
-	public ChoiceButton[] defaultChoices;
-	public ChoiceButton[] advancedChoices;
+	public CardLevel cardLevel = CardLevel.ONE;	
 
 	
 	List<ChoiceButton> buttons = new List<ChoiceButton>();
@@ -39,4 +37,8 @@ public class ChoiceCard : MonoBehaviour {
 			c.Invoke("reEnableButton", timeValue);
 		}
 	}
+
+	public bool isLevelOne(){return cardLevel == CardLevel.ONE;}
+	public bool isLevelTwo(){return cardLevel == CardLevel.TWO;}
+	public bool isLevelThree(){return cardLevel == CardLevel.THREE;}
 }

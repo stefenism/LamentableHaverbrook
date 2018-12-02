@@ -45,6 +45,7 @@ public class Building : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
 			drawer.gameObject.SetActive(true);
 			setBuildingOpen();		
 			EventManager.eventMomma.checkDraw();	
+			rebindAnimators();
 
 		}			
 	}
@@ -73,6 +74,11 @@ public class Building : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
 	{
 		setSprite(idleImage);
 		setBuildingIdle();
+	}
+
+	public void rebindAnimators()
+	{
+		drawer.getAnimator().Rebind();
 	}
 
 	public void setBuildingIdle(){buildingState = BuildingState.IDLE;}

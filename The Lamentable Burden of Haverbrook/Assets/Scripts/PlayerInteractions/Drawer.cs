@@ -21,12 +21,16 @@ public class Drawer : MonoBehaviour {
 
 	public List<EventCard> availableEvents = new List<EventCard>();
 	public List<EventCard> spentEvents = new List<EventCard>();
+
+	public List<ChoiceCard> choiceCards = new List<ChoiceCard>();
 	// Use this for initialization
 	void Awake () 
 	{
 		anim = this.gameObject.GetComponent<Animator>();
 		building = transform.parent.GetComponent<Building>();
 		status = GetComponentInChildren<Status>();
+
+		enableLevelOneCards();
 	}
 	
 	public void initialize()
@@ -54,5 +58,29 @@ public class Drawer : MonoBehaviour {
 	{
 		this.gameObject.SetActive(false);
 	}
-	
+
+	public void enableLevelOneCards()
+	{
+		foreach(ChoiceCard c in choiceCards)
+		{
+			if(!c.isLevelOne())
+				c.gameObject.SetActive(false);						
+		}
+	}	
+
+	public void enableLevelTwoCards()
+	{
+		foreach(ChoiceCard c in choiceCards)
+		{
+			if(c.isLevelTwo())
+			{
+				c.gameObject.SetActive(true);				
+			}				
+		}
+	}
+
+	public Animator getAnimator()
+	{
+		return anim;
+	}
 }

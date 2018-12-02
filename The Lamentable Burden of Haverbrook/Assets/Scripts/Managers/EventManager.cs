@@ -29,6 +29,9 @@ public class EventManager : MonoBehaviour {
 	{
 		if(Input.GetKeyDown(KeyCode.E))
 			drawCard(storyEvents, "1");
+
+		if(Input.GetKeyDown(KeyCode.D))
+			GameManager.gameDaddy.getCurrentDrawer().enableLevelTwoCards();
 	}
 
 	public void checkDraw()
