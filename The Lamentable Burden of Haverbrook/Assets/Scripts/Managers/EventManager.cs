@@ -40,7 +40,7 @@ public class EventManager : MonoBehaviour {
 		if(roll <= drawCardChance + missedDraw)
 		{
 			missedDraw = 0;
-			drawCard(GameManager.gameDaddy.getCurrentDrawer().availableEvents);
+			drawCard(GameManager.gameDaddy.getCurrentDrawer().availableEvents);			
 		}
 
 		else
@@ -86,5 +86,5 @@ public class EventManager : MonoBehaviour {
 		eventClone.transform.parent = GameManager.gameDaddy.canvas.transform;
 		eventClone.initialize();
 
-	}
+	}	
 }

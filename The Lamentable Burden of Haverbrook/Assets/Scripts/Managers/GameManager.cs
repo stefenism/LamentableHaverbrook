@@ -31,6 +31,18 @@ public class GameManager : MonoBehaviour {
 		
 	}
 
+	public void freezeTime()
+	{
+		Time.timeScale = 0;
+		Time.fixedDeltaTime = Time.timeScale * .02f;
+	}
+
+	public void restoreTime()
+	{
+		Time.timeScale = 1;
+		Time.fixedDeltaTime = Time.timeScale * .02f;
+	}
+
 	public float getSuspicion(){return gameDaddy.Suspicion;}
 	public float getHappiness(){return gameDaddy.Happiness;}
 	public float getPopulation(){return gameDaddy.Population;}
