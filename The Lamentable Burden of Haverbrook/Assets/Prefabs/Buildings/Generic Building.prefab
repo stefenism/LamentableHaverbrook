@@ -718,6 +718,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  tooltipText: 
   changeSuspicion: 1
   changeHappiness: 1
   changePopulation: 1
@@ -857,6 +858,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  tooltipText: 
   changeSuspicion: 1
   changeHappiness: 1
   changePopulation: 1
@@ -906,6 +908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d08fcc75fca9a54690ab6d8cd5b4dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardLevel: 0
   defaultChoices: []
   advancedChoices: []
 --- !u!114 &114123753858733874
@@ -1036,6 +1039,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  tooltipText: 
   changeSuspicion: 1
   changeHappiness: 1
   changePopulation: 1
@@ -1337,6 +1341,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  tooltipText: 
   changeSuspicion: 1
   changeHappiness: 1
   changePopulation: 1
@@ -1400,6 +1405,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  tooltipText: 
   changeSuspicion: 1
   changeHappiness: 1
   changePopulation: 1
@@ -1571,7 +1577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.98039216}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1635,6 +1641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d08fcc75fca9a54690ab6d8cd5b4dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardLevel: 0
   defaultChoices: []
   advancedChoices: []
 --- !u!114 &114653622784581880
@@ -1754,6 +1761,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  tooltipText: 
   changeSuspicion: 1
   changeHappiness: 1
   changePopulation: 1
@@ -1944,6 +1952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d08fcc75fca9a54690ab6d8cd5b4dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardLevel: 0
   defaultChoices: []
   advancedChoices: []
 --- !u!114 &114759783796680832
@@ -2597,12 +2606,12 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!223 &223208031608937678
 Canvas:
@@ -2702,7 +2711,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -3
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!223 &223708733845655048
 Canvas:
@@ -2782,7 +2791,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!223 &223897485567893896
 Canvas:
