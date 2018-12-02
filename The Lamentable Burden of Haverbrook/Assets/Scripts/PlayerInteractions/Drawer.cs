@@ -11,7 +11,7 @@ public class Drawer : MonoBehaviour {
 	// Use this for initialization
 	void Awake () 
 	{
-		anim = GetComponent<Animator>();
+		anim = this.gameObject.GetComponent<Animator>();
 		building = transform.parent.GetComponent<Building>();
 	}
 	
@@ -29,6 +29,7 @@ public class Drawer : MonoBehaviour {
 	public void closeDrawer()
 	{
 		anim.SetBool(OPEN_DRAWER_ANIM_STRING, false);
+		building.closeBuilding();
 	}
 
 	public void drawerClosed()

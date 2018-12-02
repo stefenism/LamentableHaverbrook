@@ -33,14 +33,16 @@ public class Building : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
 	{
 		if(isBuildingHighlighted())
 		{
-			if(GameManager.gameDaddy.getCurrentDrawer() != this.drawer)
-			{
+			if(GameManager.gameDaddy.getCurrentDrawer() == null)
 				drawer.initialize();
+
+			if(GameManager.gameDaddy.getCurrentDrawer() != this.drawer && GameManager.gameDaddy.getCurrentDrawer() != null)
+			{
 				GameManager.gameDaddy.closeCurrentDrawer();
+				drawer.initialize();				
 			}
 			drawer.gameObject.SetActive(true);
-			setBuildingOpen();
-			setSprite(idleImage);
+			setBuildingOpen();			
 
 		}			
 	}
@@ -63,6 +65,12 @@ public class Building : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
 	public void setSprite(Sprite newSprite)
 	{
 		image.sprite = newSprite;
+	}
+
+	public void closeBuilding()
+	{
+		setSprite(idleImage);
+		setBuildingIdle();
 	}
 
 	public void setBuildingIdle(){buildingState = BuildingState.IDLE;}
