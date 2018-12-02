@@ -16,6 +16,8 @@ public class ChoiceButton : Button {
 
     private ChoiceCard cardParent;
 
+    public string tooltipText = null;
+
     //[Header("change These Values")]
     [HideInInspector]
     public bool changeSuspicion, changeHappiness, changePopulation, changeFanatacism, changeHunger;

@@ -5,6 +5,14 @@ using UnityEngine.UI;
 
 public class ChoiceCard : MonoBehaviour {
 
+	public enum CardLevel
+	{
+		ONE,
+		TWO,
+		THREE,
+	}
+
+	public CardLevel cardLevel = CardLevel.ONE;
 	public ChoiceButton[] defaultChoices;
 	public ChoiceButton[] advancedChoices;
 
