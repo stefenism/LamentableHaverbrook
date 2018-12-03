@@ -7,17 +7,25 @@ using TMPro;
 public class Status : MonoBehaviour {
 
 	public string status = "null";
+	public string status2 = "null";
 	private string statusType = null;
 	public TextMeshProUGUI statusText;
+	Drawer.PrimaryStat statSaved;
+	
 
 	public void initialize(Drawer.PrimaryStat stat)
 	{
 		statusText = GetComponentInChildren<TextMeshProUGUI>();
 		Debug.Log("stat: " + stat);
 		Debug.Log("status text: " + statusText);
-		statusText.text = getStatus(stat);
+		//statusText.text = getStatus(stat);
+		statSaved= stat;
 	}
-
+	void Update()
+    {
+		Debug.Log(GameManager.gameDaddy.getCow() + " aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        statusText.text = getStatus(statSaved);
+    }
 
 	public string getStatus(Drawer.PrimaryStat stat)
 	{
@@ -27,7 +35,8 @@ public class Status : MonoBehaviour {
 			{
 				Debug.Log("stat2: " + stat);
 				Debug.Log("status: " + status);
-				return status + GameManager.gameDaddy.getDescriptors().getHungerDescriptor() + "";				
+				return status + GameManager.gameDaddy.getDescriptors().getHungerDescriptor() + "\n" + 
+				status2 +":" +GameManager.gameDaddy.getCow();				
 			}
 			case Drawer.PrimaryStat.HAPPINESS:
 				return status + GameManager.gameDaddy.getDescriptors().getHappinessDescriptor();
@@ -43,4 +52,5 @@ public class Status : MonoBehaviour {
 
 		}
 	}
+	
 }

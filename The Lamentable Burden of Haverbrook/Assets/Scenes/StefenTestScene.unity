@@ -210,22 +210,22 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114533279837395964, guid: 71579ea8f10012942b106790fda5b416,
+    - target: {fileID: 114159997348607506, guid: 71579ea8f10012942b106790fda5b416,
         type: 2}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114533279837395964, guid: 71579ea8f10012942b106790fda5b416,
+    - target: {fileID: 114159997348607506, guid: 71579ea8f10012942b106790fda5b416,
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114159997348607506, guid: 71579ea8f10012942b106790fda5b416,
+    - target: {fileID: 114533279837395964, guid: 71579ea8f10012942b106790fda5b416,
         type: 2}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114159997348607506, guid: 71579ea8f10012942b106790fda5b416,
+    - target: {fileID: 114533279837395964, guid: 71579ea8f10012942b106790fda5b416,
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -339,6 +339,16 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215017941798632, guid: 71579ea8f10012942b106790fda5b416,
+        type: 2}
+      propertyPath: status
+      value: 'The Monster is '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215017941798632, guid: 71579ea8f10012942b106790fda5b416,
+        type: 2}
+      propertyPath: status2
+      value: Cows
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71579ea8f10012942b106790fda5b416, type: 2}

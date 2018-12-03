@@ -526,6 +526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   status: 'Last time you checked the Monster was: '
   statusText: {fileID: 114533279837395964}
+  statusText2: {fileID: 0}
 --- !u!114 &114248761854007832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -758,8 +759,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'last time you checked...the monster was:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11a909cab4d514c418f81b33e9bd69a8, type: 2}
+  m_sharedMaterial: {fileID: 21926291148919280, guid: 11a909cab4d514c418f81b33e9bd69a8,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -783,8 +785,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 20.8
-  m_fontSizeBase: 20.8
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -801,7 +803,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 28
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1123,7 +1125,7 @@ MonoBehaviour:
   populationValue: 15
   fanatacismValue: 15
   hungerValue: 15
-  timeValue: 20
+  timeValue: 10
   cowValue: 1
   bloodValue: 0
 --- !u!222 &222258827397388790

@@ -57,6 +57,12 @@ public class ChoiceButton : Button {
         if(changeHunger)
             GameManager.gameDaddy.setHunger(hungerValue);
 
+        if(changeCows)
+            GameManager.gameDaddy.setCow(cowValue);
+
+        if(changeBlood)
+            GameManager.gameDaddy.setBloodCount((int)bloodValue);
+
         this.interactable = false;
         Invoke("reEnableButton", timeValue);
 
