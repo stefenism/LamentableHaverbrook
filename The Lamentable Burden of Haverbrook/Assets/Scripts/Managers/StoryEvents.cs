@@ -224,11 +224,11 @@ public class StoryEvents : MonoBehaviour {
 
 	public void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.E))
+		/* if(Input.GetKeyDown(KeyCode.E))
 		{
 			Debug.Log("pressed key");
 			triggerBuyBar();
-		}
+		} */
 	}
 	public void triggerBuyBar()
 	{		
@@ -237,6 +237,14 @@ public class StoryEvents : MonoBehaviour {
 		Debug.Log("buy bar button: " + buyBarButton);
 		buyBarButton.gameObject.SetActive(true);
 		
+	}
+
+	public void triggerRunOffice()
+	{
+		List<ChoiceCard> choiceCards = GameManager.gameDaddy.cityBuilding.getDrawer().choiceCards;
+		ChoiceButton runOfficeButton = choiceCards.Find(x => x.isLevelTwo()).gameObject.GetComponent<SpecialButton>().specialButton;
+		Debug.Log("buy bar button: " + runOfficeButton);
+		runOfficeButton.gameObject.SetActive(true);
 	}
 
 	public void CheckAllBuildings()

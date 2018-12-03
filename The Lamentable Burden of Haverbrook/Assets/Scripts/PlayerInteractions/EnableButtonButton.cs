@@ -8,7 +8,7 @@ public class EnableButtonButton : MonoBehaviour {
 	public ChoiceCard parentCard;
 	public float secondsToEnable;
 	
-	public void enableButton()
+	public virtual void enableButton()
 	{
 		if(buttonToEnable.gameObject.activeSelf)
 			return;
@@ -20,7 +20,7 @@ public class EnableButtonButton : MonoBehaviour {
 		Invoke("setReady", secondsToEnable);
 	}
 
-	public void setReady()
+	public virtual void setReady()
 	{
 		buttonToEnable.interactable = true;
 	}
