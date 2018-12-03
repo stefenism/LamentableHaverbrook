@@ -267,6 +267,11 @@ public class StoryEvents : MonoBehaviour {
 		yield return new WaitForSeconds(seconds);
 		EventManager.eventMomma.drawCard(EventManager.eventMomma.storyEvents, BAR1_EVENT_NAME);
 		barQuired = true;
+
+		//make bar visible activated
+		//play nw building sound
+		GameManager.gameDaddy.barBuilding.gameObject.SetActive(true);
+		AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.newBuilding, 50);
 		
 		//lose town todo
 		//GameManager.gameDaddy.loseTown();
