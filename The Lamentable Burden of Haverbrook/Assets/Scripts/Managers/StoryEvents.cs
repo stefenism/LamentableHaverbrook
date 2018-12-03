@@ -222,10 +222,30 @@ public class StoryEvents : MonoBehaviour {
 		StartCoroutine(triggerSacrificeTownEvent(20));
 	}
 
+	public void Update()
+	{
+		if(Input.GetKeyDown(KeyCode.E))
+		{
+			Debug.Log("pressed key");
+			triggerBuyBar();
+		}
+	}
+	public void triggerBuyBar()
+	{		
+		List<ChoiceCard> choiceCards = GameManager.gameDaddy.barBuilding.getDrawer().choiceCards;
+		ChoiceButton buyBarButton = choiceCards.Find(x => x.isLevelTwo()).gameObject.GetComponent<SpecialButton>().specialButton;
+		Debug.Log("buy bar button: " + buyBarButton);
+		buyBarButton.gameObject.SetActive(true);
+		
+	}
+
 	public void CheckAllBuildings()
 	{
 		if(barQuired && cityQuired && churchQuired && policeQuired && !allBuildings)
+		{
 			allBuildings = true;
+			triggerBuyBar();
+		}			
 	}
 
 	IEnumerator triggerTownEvent(float seconds)

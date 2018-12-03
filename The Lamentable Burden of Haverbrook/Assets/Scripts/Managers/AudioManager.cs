@@ -50,11 +50,6 @@ public class AudioManager : MonoBehaviour {
 
 	public void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.S))
-			changeTrack(bgMusic, bgMusicClips[1], 100);
-
-		if(Input.GetKeyDown(KeyCode.Q))
-			changeTrack(bgMusic, bgMusicClips[0], 100);
 	}
 
 	IEnumerator fade_volume_to(AudioSource audioSource, float volume, float duration)

@@ -23,6 +23,7 @@ public class Drawer : MonoBehaviour {
 	public List<EventCard> spentEvents = new List<EventCard>();
 
 	public List<ChoiceCard> choiceCards = new List<ChoiceCard>();
+		
 	// Use this for initialization
 	void Awake () 
 	{

@@ -36,15 +36,6 @@ public class EventManager : MonoBehaviour {
 		storyEventRef = GetComponent<StoryEvents>();
 	}
 
-	public void Update()
-	{
-		if(Input.GetKeyDown(KeyCode.E))
-			drawCard(storyEvents, "1");
-
-		if(Input.GetKeyDown(KeyCode.D))
-			GameManager.gameDaddy.getCurrentDrawer().enableLevelTwoCards();
-	}
-
 	public void checkDraw()
 	{
 		int roll = Random.Range(0, 100);
