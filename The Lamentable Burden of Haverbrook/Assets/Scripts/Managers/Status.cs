@@ -16,14 +16,11 @@ public class Status : MonoBehaviour {
 	public void initialize(Drawer.PrimaryStat stat)
 	{
 		statusText = GetComponentInChildren<TextMeshProUGUI>();
-		Debug.Log("stat: " + stat);
-		Debug.Log("status text: " + statusText);
 		//statusText.text = getStatus(stat);
 		statSaved= stat;
 	}
 	void Update()
     {
-		Debug.Log(GameManager.gameDaddy.getCow() + " aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         statusText.text = getStatus(statSaved);
     }
 
@@ -33,10 +30,8 @@ public class Status : MonoBehaviour {
 		{
 			case Drawer.PrimaryStat.HUNGER:
 			{
-				Debug.Log("stat2: " + stat);
-				Debug.Log("status: " + status);
 				return status + GameManager.gameDaddy.getDescriptors().getHungerDescriptor() + "\n" + 
-				status2 +":" +GameManager.gameDaddy.getCow();				
+				status2 +": " +GameManager.gameDaddy.getCow();				
 			}
 			case Drawer.PrimaryStat.HAPPINESS:
 				return status + GameManager.gameDaddy.getDescriptors().getHappinessDescriptor();
