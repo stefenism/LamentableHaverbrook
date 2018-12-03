@@ -39,6 +39,10 @@ public class AudioManager : MonoBehaviour {
 	public AudioClip[] sfxSounds;
 	public AudioClip[] bgMusicClips;
 
+	public AudioClip menuOpen;
+	public AudioClip menuClose;
+	public AudioClip newBuilding;
+
 	void Awake()
 	{
 		if(this != instance)
