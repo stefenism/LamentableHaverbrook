@@ -40,6 +40,11 @@ public class ChoiceCard : MonoBehaviour {
 		Debug.Log("button pressed choice");
 	}
 
+	public void updateButtons(ChoiceButton newButton)
+	{
+		buttons.Add(newButton);
+	}
+
 	public bool isLevelOne(){return cardLevel == CardLevel.ONE;}
 	public bool isLevelTwo(){return cardLevel == CardLevel.TWO;}
 	public bool isLevelThree(){return cardLevel == CardLevel.THREE;}

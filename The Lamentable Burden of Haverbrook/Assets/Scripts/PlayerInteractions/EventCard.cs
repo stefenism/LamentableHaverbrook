@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EventCard : ChoiceCard {
 
 
-	public Animator anim;
+	public Animator anim;	
 	public string ID = null;
 	/* List<ChoiceButton> buttons = new List<ChoiceButton>();
 	// Use this for initialization
@@ -43,7 +43,7 @@ public class EventCard : ChoiceCard {
 		RectTransform thisTransform = GetComponent<RectTransform>();
 		thisTransform.anchoredPosition = new Vector2(0,0);
 
-		anim = GetComponent<Animator>();
+		anim = GetComponent<Animator>();		
 	}
 
 	public override void buttonPressed(float timeValue, ChoiceButton clickedButton)
@@ -52,6 +52,7 @@ public class EventCard : ChoiceCard {
 		GameManager.gameDaddy.restoreTime();
 		anim.SetBool("close", true);
 		Debug.Log("pressed event");
+
 		//Destroy(this.gameObject);
 	}
 

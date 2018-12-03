@@ -14,6 +14,7 @@ public class EventManager : MonoBehaviour {
 	private GameStatus gameStatus = GameStatus.PRE;
 
 	public static EventManager eventMomma = null;
+	private StoryEvents storyEventRef;
 
 	public List<EventCard> storyEvents = new List<EventCard>();
 	public List<EventCard> spentStoryEvents = new List<EventCard>();
@@ -32,6 +33,7 @@ public class EventManager : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 
 		//shuffle deck
+		storyEventRef = GetComponent<StoryEvents>();
 	}
 
 	public void Update()
@@ -104,4 +106,6 @@ public class EventManager : MonoBehaviour {
 
 	public bool isGameStarted(){return gameStatus == GameStatus.STARTED;}
 	public void setGameStarted(){gameStatus = GameStatus.STARTED;}
+
+	public StoryEvents getStoryEvents(){return storyEventRef;}
 }

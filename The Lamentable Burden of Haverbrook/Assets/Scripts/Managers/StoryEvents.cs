@@ -75,6 +75,7 @@ public class StoryEvents : MonoBehaviour {
 		{
 			EventManager.eventMomma.drawCard(EventManager.eventMomma.storyEvents, TOWN_EVENT_NAME);
 			townQuired = true;
+			triggerBar();
 		}			
 	}
 	void CheckBar()
@@ -165,9 +166,25 @@ public class StoryEvents : MonoBehaviour {
 		}
 	}
 
+	public void triggerTown()
+	{
+		EventManager.eventMomma.drawCard(EventManager.eventMomma.storyEvents, TOWN_EVENT_NAME);
+		StartCoroutine(triggerTownEvent(30));
+	}
 	public void triggerBar()
 	{
 		StartCoroutine(triggerBarEvent(30));
+	}
+
+	public void triggerStart()
+	{
+		Debug.Log("game has started officially");
+		GameManager.gameDaddy.setHungerTime(5);
+		GameManager.gameDaddy.setPopulation(20);
+		GameManager.gameDaddy.setSuspicion(0);
+		GameManager.gameDaddy.setFanaticism(0);
+
+		EventManager.eventMomma.startGame();
 	}
 
 	public void triggerBarTwo()
@@ -211,17 +228,18 @@ public class StoryEvents : MonoBehaviour {
 			allBuildings = true;
 	}
 
+	IEnumerator triggerTownEvent(float seconds)
+	{
+		yield return new WaitForSeconds(seconds);
+		EventManager.eventMomma.drawCard(EventManager.eventMomma.storyEvents, BAR1_EVENT_NAME);
+		barQuired = true;
+	}
 	IEnumerator triggerBarEvent(float seconds)
 	{
 		yield return new WaitForSeconds(seconds);
 		EventManager.eventMomma.drawCard(EventManager.eventMomma.storyEvents, BAR1_EVENT_NAME);
 		barQuired = true;
-		GameManager.gameDaddy.setHungerTime(5);
-		GameManager.gameDaddy.setPopulation(20);
-		GameManager.gameDaddy.setSuspicion(0);
-		GameManager.gameDaddy.setFanaticism(0);
-
-		EventManager.eventMomma.startGame();
+		
 		//lose town todo
 		//GameManager.gameDaddy.loseTown();
 

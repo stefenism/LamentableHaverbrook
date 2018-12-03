@@ -20,10 +20,10 @@ public class ChoiceButton : Button {
 
     //[Header("change These Values")]
     [HideInInspector]
-    public bool changeSuspicion, changeHappiness, changePopulation, changeFanatacism, changeHunger;
+    public bool changeSuspicion, changeHappiness, changePopulation, changeFanatacism, changeHunger, changeBlood, changeCows;
     
     [HideInInspector]
-    public float suspicionValue, happinessValue, populationValue, fanatacismValue, hungerValue, timeValue;
+    public float suspicionValue, happinessValue, populationValue, fanatacismValue, hungerValue, timeValue, cowValue, bloodValue;
 	
 
     public void Initialize(ChoiceCard card)

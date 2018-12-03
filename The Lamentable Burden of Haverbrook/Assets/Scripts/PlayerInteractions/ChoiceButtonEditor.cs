@@ -13,6 +13,8 @@ public class ChoiceButtonEditor : Editor {
 	SerializedProperty fanatacismValue;
 	SerializedProperty hungerValue;
 	SerializedProperty timeValue;
+	SerializedProperty cowValue;
+	SerializedProperty bloodValue;
 
 	void OnEnable()
 	{
@@ -22,6 +24,8 @@ public class ChoiceButtonEditor : Editor {
 		fanatacismValue = serializedObject.FindProperty("fanatacismValue");
 		hungerValue = serializedObject.FindProperty("hungerValue");
 		timeValue = serializedObject.FindProperty("timeValue");
+		cowValue = serializedObject.FindProperty("cowValue");
+		bloodValue = serializedObject.FindProperty("bloodValue");
 	}
 
 	public override void OnInspectorGUI()
@@ -43,6 +47,8 @@ public class ChoiceButtonEditor : Editor {
 		choiceButton.changePopulation = GUILayout.Toggle(choiceButton.changePopulation, "Change Population on Press");
 		choiceButton.changeFanatacism = GUILayout.Toggle(choiceButton.changeFanatacism, "Change Fanatacism on Press");
 		choiceButton.changeHunger = GUILayout.Toggle(choiceButton.changeHunger, "Change Hunger on press");
+		choiceButton.changeBlood = GUILayout.Toggle(choiceButton.changeBlood, "Change Blood on Press");
+		choiceButton.changeCows = GUILayout.Toggle(choiceButton.changeCows, "Change Cows on Press");
 
 		GUILayout.Space(20f);
 
@@ -71,8 +77,18 @@ public class ChoiceButtonEditor : Editor {
 			choiceButton.hungerValue = EditorGUILayout.FloatField("Change Hunger by: ", choiceButton.hungerValue);
 		}
 
+		if(choiceButton.changeBlood)
+		{
+			choiceButton.bloodValue = EditorGUILayout.FloatField("Change Blood by: " , choiceButton.bloodValue);
+		}
+
+		if(choiceButton.changeCows)
+		{
+			choiceButton.cowValue = EditorGUILayout.FloatField("Change Cows by: ", choiceButton.cowValue);
+		}
+
 		if(choiceButton.changeSuspicion || choiceButton.changeHappiness || choiceButton.changePopulation
-			|| choiceButton.changeFanatacism || choiceButton.changeHunger)
+			|| choiceButton.changeFanatacism || choiceButton.changeHunger || choiceButton.changeBlood || choiceButton.changeCows)
 		{
 			choiceButton.timeValue = EditorGUILayout.FloatField("Change over seconds: ", choiceButton.timeValue);
 		}
