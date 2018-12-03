@@ -9,6 +9,8 @@ public class StoryEvents : MonoBehaviour {
 
 	public float fadeOutTime = 5;
 
+	bool cowDead = false;
+	bool townQuired = false;
 	bool barQuired = false;
 	bool barQuired2 = false;
 	bool churchQuired = false;
@@ -25,6 +27,7 @@ public class StoryEvents : MonoBehaviour {
 	bool churchLevelTwo = false;
 	bool churchLevelThree = false;
 
+	const string COWDIED_EVENT_NAME = "CowDied";
 	const string TOWN_EVENT_NAME = "Town";
 	const string BAR1_EVENT_NAME = "Bar1";
 	const string BAR2_EVENT_NAME = "Bar2";
@@ -62,8 +65,17 @@ public class StoryEvents : MonoBehaviour {
 
 	void CheckField()
 	{
-		if(GameManager.gameDaddy.getBlood() >= 3)
+		if(GameManager.gameDaddy.getBlood() >= 3 && !cowDead)
+		{
+			EventManager.eventMomma.drawCard(EventManager.eventMomma.storyEvents, COWDIED_EVENT_NAME);
+			cowDead = true;
+		}			
+
+		if(GameManager.gameDaddy.getCowDead() >= 3 && !townQuired)
+		{
 			EventManager.eventMomma.drawCard(EventManager.eventMomma.storyEvents, TOWN_EVENT_NAME);
+			townQuired = true;
+		}			
 	}
 	void CheckBar()
 	{

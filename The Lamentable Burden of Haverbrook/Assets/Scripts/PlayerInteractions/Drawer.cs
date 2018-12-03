@@ -38,7 +38,7 @@ public class Drawer : MonoBehaviour {
 		GameManager.gameDaddy.setCurrentDrawer(this);
 		//OpenDrawer();
 		status = GetComponentInChildren<Status>();
-		status.initialize("boogidy");
+		status.initialize(primaryStat);
 
 	}
 

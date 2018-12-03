@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 464819205}
   - component: {fileID: 464819204}
+  - component: {fileID: 464819206}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -220,6 +221,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &464819206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 464819203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a30ffc239108441ad6b92e9aa3f395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &600246076
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +372,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &977334333 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114800991152563376, guid: 270d51d27b25a6141bd9101dbadf65b2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1865469364}
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
 --- !u!1 &1258059493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,6 +1336,21 @@ Prefab:
       propertyPath: m_OverrideSorting
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114928124683871858, guid: 270d51d27b25a6141bd9101dbadf65b2,
+        type: 2}
+      propertyPath: primaryStat
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385001478104456, guid: 270d51d27b25a6141bd9101dbadf65b2,
+        type: 2}
+      propertyPath: status
+      value: 'Last time you checked the Monster was: '
+      objectReference: {fileID: 0}
+    - target: {fileID: 114385001478104456, guid: 270d51d27b25a6141bd9101dbadf65b2,
+        type: 2}
+      propertyPath: statusText
+      value: 
+      objectReference: {fileID: 977334333}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 270d51d27b25a6141bd9101dbadf65b2, type: 2}
   m_IsPrefabAsset: 0

@@ -6,20 +6,41 @@ using TMPro;
 
 public class Status : MonoBehaviour {
 
-	private string status = null;
+	public string status = "null";
 	private string statusType = null;
-	private TextMeshProUGUI statusText;
+	public TextMeshProUGUI statusText;
 
-	public void initialize(string stat)
+	public void initialize(Drawer.PrimaryStat stat)
 	{
-		statusText = GetComponent<TextMeshProUGUI>();
-		statusType = stat;
+		statusText = GetComponentInChildren<TextMeshProUGUI>();
+		Debug.Log("stat: " + stat);
+		Debug.Log("status text: " + statusText);
+		statusText.text = getStatus(stat);
 	}
 
 
-	public void setStatus(string newStatus, string message)
+	public string getStatus(Drawer.PrimaryStat stat)
 	{
-		status = newStatus;
-		statusText.text = message + " " + status;
+		switch(stat)
+		{
+			case Drawer.PrimaryStat.HUNGER:
+			{
+				Debug.Log("stat2: " + stat);
+				Debug.Log("status: " + status);
+				return status + GameManager.gameDaddy.getDescriptors().getHungerDescriptor() + "";				
+			}
+			case Drawer.PrimaryStat.HAPPINESS:
+				return status + GameManager.gameDaddy.getDescriptors().getHappinessDescriptor();
+			case Drawer.PrimaryStat.FANATICISM:
+				return status + GameManager.gameDaddy.getDescriptors().getFanatacismDescriptor();
+			case Drawer.PrimaryStat.POPULATION:
+				return status + GameManager.gameDaddy.getDescriptors().getPopulationDescriptor();
+			case Drawer.PrimaryStat.SUSPICION:
+				return status + GameManager.gameDaddy.getDescriptors().getSuspicionDescriptor();
+
+			default:
+				return "wha!?";
+
+		}
 	}
 }
