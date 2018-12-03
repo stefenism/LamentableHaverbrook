@@ -9,11 +9,26 @@ public class GameManager : MonoBehaviour {
 
 	private Drawer currentDrawer;
 	//STATS
-	private float Suspicion = 50;
-	private float Happiness = 50;
-	private float Population = 50;
-	private float Fanatacism = 50;
-	private float Hunger = 50;
+	private float Suspicion = 0;
+	private float Happiness = 0;
+	private float Population = 0;
+	private float Fanatacism = 0;
+	private float Hunger = 5;
+	private float Cow = 2;
+
+	private float currentHungerTime = 0;
+	private float hungerIncreaseTime = 10;
+	private float hungerIncreaseValue = 1;
+
+	private float currentPopulationTime = 0;
+	private float populationIncreaseTime = 10;
+
+	private int bloodCount = 0;
+
+	public Building barBuilding;
+	public Building churchBuilding;
+	public Building policeBuilding;
+	public Building cityBuilding;
 
 	// Use this for initialization
 	void Awake () 
@@ -29,6 +44,35 @@ public class GameManager : MonoBehaviour {
 		//Keep our GameDaddy 4 E-V-E-R
 		DontDestroyOnLoad(gameObject);
 		
+	}
+
+	public void Update()
+	{
+		IncreaseHunger();
+		if(EventManager.eventMomma.isGameStarted())
+		{
+			IncreasePopulation();
+		}
+	}
+
+	void IncreaseHunger()
+	{
+		currentHungerTime += Time.deltaTime;
+		if(currentHungerTime > hungerIncreaseTime)
+		{
+			currentHungerTime = 0;
+			setHunger(hungerIncreaseValue);
+		}
+	}
+
+	void IncreasePopulation()
+	{
+		currentPopulationTime += Time.deltaTime;
+		if(currentPopulationTime >= populationIncreaseTime)
+		{
+			currentPopulationTime = 0;
+			setPopulation(Mathf.Ceil((getHappiness() - 50)/ 20));
+		}
 	}
 
 	public void freezeTime()
@@ -48,12 +92,18 @@ public class GameManager : MonoBehaviour {
 	public float getPopulation(){return gameDaddy.Population;}
 	public float getFanatacism(){return gameDaddy.Fanatacism;}
 	public float getHunger(){return gameDaddy.Hunger;}
+	public float getCow(){return gameDaddy.Cow;}
+	public float getBlood(){return gameDaddy.bloodCount;}
 
 	public void setSuspicion(float newSuspicion){Suspicion = Mathf.Clamp(Suspicion + newSuspicion, 0, 100);}
 	public void setHappiness(float newHappiness){Happiness = Mathf.Clamp(Happiness + newHappiness, 0, 100);}
 	public void setPopulation(float newPopulation){Population = Mathf.Clamp(Population + newPopulation, 0, 100);}
 	public void setFanaticism(float newFanaticism){Fanatacism = Mathf.Clamp(Fanatacism + newFanaticism, 0, 100);}
 	public void setHunger(float newHunger){Hunger = Mathf.Clamp(Hunger + newHunger, 0, 100);}
+	public void setHungerIncrease(float newHunger){hungerIncreaseValue = newHunger;}
+	public void setHungerTime(float newTime){hungerIncreaseTime = newTime;}
+	public void setCow(float newCow){Cow = Mathf.Clamp(Cow + newCow, 0, 20);}
+	public void setBloodCount(int newBlood){bloodCount = Mathf.Clamp(bloodCount + newBlood, 0, 3);}
 
 	public void setCurrentDrawer(Drawer newDrawer)
 	{

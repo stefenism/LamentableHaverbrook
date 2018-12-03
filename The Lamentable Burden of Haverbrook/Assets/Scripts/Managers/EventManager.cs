@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour {
 
+	private enum GameStatus
+	{
+		PRE,
+		STARTED,
+		OVER,
+	}
+
+	private GameStatus gameStatus = GameStatus.PRE;
+
 	public static EventManager eventMomma = null;
 
 	public List<EventCard> storyEvents = new List<EventCard>();
@@ -87,4 +96,12 @@ public class EventManager : MonoBehaviour {
 		eventClone.initialize();
 
 	}	
+
+	public void startGame()
+	{
+		setGameStarted();
+	}
+
+	public bool isGameStarted(){return gameStatus == GameStatus.STARTED;}
+	public void setGameStarted(){gameStatus = GameStatus.STARTED;}
 }

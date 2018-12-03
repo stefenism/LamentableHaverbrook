@@ -84,6 +84,8 @@ public class Building : MonoBehaviour, IPointerClickHandler, IPointerEnterHandle
 		drawer.getAnimator().Rebind();
 	}
 
+	public Drawer getDrawer(){return this.drawer;}
+
 	public void setBuildingIdle(){buildingState = BuildingState.IDLE;}
 	public void setBuildingHighlighted(){buildingState = BuildingState.HIGHLIGHTED;}
 	public void setBuildingOpen(){buildingState = BuildingState.OPEN;}

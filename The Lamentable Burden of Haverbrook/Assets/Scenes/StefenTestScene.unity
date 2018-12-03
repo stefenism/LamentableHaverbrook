@@ -203,6 +203,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1495714317}
+  barBuilding: {fileID: 0}
+  churchBuilding: {fileID: 0}
+  policeBuilding: {fileID: 0}
+  cityBuilding: {fileID: 0}
 --- !u!4 &464819205
 Transform:
   m_ObjectHideFlags: 0
@@ -225,6 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 600246078}
   - component: {fileID: 600246077}
+  - component: {fileID: 600246079}
   m_Layer: 0
   m_Name: EventManager
   m_TagString: Untagged
@@ -259,6 +264,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &600246079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 600246076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 702813a33913a0d46b47db599558cd9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storyEvents: []
+  spentStoryEvents: []
+  fadeOutTime: 5
 --- !u!224 &748485203 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224592279801924990, guid: 270d51d27b25a6141bd9101dbadf65b2,
@@ -537,6 +556,7 @@ GameObject:
   - component: {fileID: 1680958439}
   - component: {fileID: 1680958438}
   - component: {fileID: 1680958437}
+  - component: {fileID: 1680958441}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -748,7 +768,7 @@ MonoBehaviour:
   mixer: {fileID: 0}
   sfxSource: {fileID: 1680958438}
   bgMusic: {fileID: 1680958437}
-  bgMusic2: {fileID: 0}
+  bgMusic2: {fileID: 1680958441}
   sfxSounds: []
   bgMusicClips:
   - {fileID: 8300000, guid: 6a98492cd2a95c041bb6d3da4c8d3763, type: 3}
@@ -766,6 +786,101 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1680958441
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1680958436}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1865469364
 Prefab:
   m_ObjectHideFlags: 0
@@ -986,42 +1101,42 @@ Prefab:
     - target: {fileID: 224545689795131206, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224545689795131206, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224545689795131206, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224545689795131206, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 224519029216667052, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224519029216667052, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224519029216667052, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224519029216667052, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 224168404818938096, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
@@ -1066,22 +1181,22 @@ Prefab:
     - target: {fileID: 224346055807950490, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224346055807950490, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224346055807950490, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224346055807950490, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 224226775857420600, guid: 270d51d27b25a6141bd9101dbadf65b2,
         type: 2}

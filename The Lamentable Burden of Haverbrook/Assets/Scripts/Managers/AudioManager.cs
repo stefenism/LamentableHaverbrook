@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour {
 	const float DEFAULT_FADE_TIME = .75f;
 
 	static private AudioManager s_instance;
-	static public AudioManager Instance
+	static public AudioManager instance
 	{
 		get {
 			if (s_instance != null)
@@ -41,7 +41,7 @@ public class AudioManager : MonoBehaviour {
 
 	void Awake()
 	{
-		if(this != Instance)
+		if(this != instance)
 		{
 			Destroy(this.gameObject);
 			return;
@@ -73,16 +73,33 @@ public class AudioManager : MonoBehaviour {
 
 	public static void PlaySound(AudioSource source, AudioClip clip, float volume)
 	{
-		Instance.sfxSource.PlayOneShot(clip, volume);
+		instance.sfxSource.PlayOneShot(clip, volume);
 	}
 
 	public static void changeTrack(AudioSource source, AudioClip clip, float volume)
 	{
-		float currentTime = source.time;
-		source.Stop();
+		
+		if(instance.bgMusic.isPlaying)
+		{
+			float currentTime = instance.bgMusic.time;
+			instance.bgMusic.Stop();
+			instance.bgMusic2.clip = clip;
+			instance.bgMusic2.Play();
+			instance.bgMusic2.time = currentTime;
+		}
+	
+		else//(instance.bgMusic2.isPlaying)
+		{
+			float currentTime = instance.bgMusic2.time;
+			instance.bgMusic2.Stop();
+			instance.bgMusic.clip = clip;
+			instance.bgMusic.Play();
+			instance.bgMusic.time = currentTime;
+		}
+		/* source.Stop();
 		source.clip = clip;
 		source.Play();
 		source.time = currentTime;
-
+ */
 	}
 }
