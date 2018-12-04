@@ -6,6 +6,6 @@ public class SetCowDead : MonoBehaviour {
 
 	public void setCowDead()
 	{
-		GameManager.gameDaddy.setCowDead(1);
+		EventManager.eventMomma.getStoryEvents().triggerFeedCow();
 	}
 }

@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 114001309059062108}
   - component: {fileID: 223547932015188128}
   - component: {fileID: 114757173143431790}
+  - component: {fileID: 114752684899766036}
   m_Layer: 0
   m_Name: BarnCardLvl1
   m_TagString: Untagged
@@ -1125,7 +1126,20 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Feed it Cow Blood
+  m_Text: Feed it Cow
+--- !u!114 &114752684899766036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1167626638856928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672f993a04e40534eb3b9f59dedd7a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specialButton: {fileID: 114201947790348538}
+  disableButton: {fileID: 114486595950342786}
 --- !u!114 &114757173143431790
 MonoBehaviour:
   m_ObjectHideFlags: 1

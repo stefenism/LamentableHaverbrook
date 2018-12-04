@@ -250,6 +250,19 @@ public class StoryEvents : MonoBehaviour {
 		runOfficeButton.gameObject.SetActive(true);
 	}
 
+	public void triggerFeedCow()
+	{
+		Debug.Log("trigger feed cow:");
+		List<ChoiceCard> choiceCards = GameManager.gameDaddy.barnBuilding.getDrawer().choiceCards;
+		ChoiceCard card = choiceCards.Find(x => x.isLevelOne());
+		ChoiceButton triggerFeedCowButton = card.gameObject.GetComponent<SpecialButton>().specialButton;
+		ChoiceButton triggerFeedCowBlood = card.gameObject.GetComponent<SpecialButton>().disableButton;
+		triggerFeedCowBlood.gameObject.SetActive(false);
+		triggerFeedCowButton.gameObject.SetActive(true);
+		triggerFeedCowButton.Initialize(card);
+		card.updateButtons(triggerFeedCowButton);
+	}
+
 	public void CheckAllBuildings()
 	{
 		if(barQuired && cityQuired && churchQuired && policeQuired && !allBuildings)
@@ -274,7 +287,7 @@ public class StoryEvents : MonoBehaviour {
 		//make bar visible activated
 		//play nw building sound
 		GameManager.gameDaddy.barBuilding.gameObject.SetActive(true);
-		AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.newBuilding, 50);
+		AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.newBuilding, 10);
 		
 		//lose town todo
 		//GameManager.gameDaddy.loseTown();

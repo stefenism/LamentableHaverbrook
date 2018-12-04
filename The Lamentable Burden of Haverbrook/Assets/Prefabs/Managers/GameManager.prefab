@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
+  barnBuilding: {fileID: 0}
   barBuilding: {fileID: 0}
   churchBuilding: {fileID: 0}
   policeBuilding: {fileID: 0}

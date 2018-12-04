@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour {
 	private int bloodCount = 0;
 	private int cowDeadCount = 0;
 
+	public Building barnBuilding;
 	public Building barBuilding;
 	public Building churchBuilding;
 	public Building policeBuilding;
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour {
 		{
 			IncreasePopulation();
 		}
+
 	}
 
 	void IncreaseHunger()
@@ -110,7 +112,12 @@ public class GameManager : MonoBehaviour {
 	public void setHunger(float newHunger){Hunger = Mathf.Clamp(Hunger + newHunger, 0, 100);}
 	public void setHungerIncrease(float newHunger){hungerIncreaseValue = newHunger;}
 	public void setHungerTime(float newTime){hungerIncreaseTime = newTime;}
-	public void setCow(float newCow){Cow = Mathf.Clamp(Cow + newCow, 0, 20);}
+	public void setCow(float newCow)
+	{
+		Cow = Mathf.Clamp(Cow + newCow, 0, 20);
+		if(Mathf.Sign(newCow) < 0)
+			setCowDead(1);
+	}
 	public void setBloodCount(int newBlood){bloodCount = Mathf.Clamp(bloodCount + newBlood, 0, 3);}
 	public void setCowDead(int newDeadCow){cowDeadCount = Mathf.Clamp(cowDeadCount + newDeadCow, 0, 100);}
 

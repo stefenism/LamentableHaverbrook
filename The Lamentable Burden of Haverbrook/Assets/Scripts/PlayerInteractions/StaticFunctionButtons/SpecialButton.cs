@@ -5,4 +5,5 @@ using UnityEngine;
 public class SpecialButton : MonoBehaviour {
 
 	public ChoiceButton specialButton;
+	public ChoiceButton disableButton;
 }
