@@ -10,7 +10,10 @@ public class Status : MonoBehaviour {
 	public string status2 = "null";
 	private string statusType = null;
 	public TextMeshProUGUI statusText;
+
+
 	Drawer.PrimaryStat statSaved;
+	
 	
 
 	public void initialize(Drawer.PrimaryStat stat)
@@ -26,6 +29,8 @@ public class Status : MonoBehaviour {
 
 	public string getStatus(Drawer.PrimaryStat stat)
 	{
+		 
+
 		switch(stat)
 		{
 			case Drawer.PrimaryStat.HUNGER:
