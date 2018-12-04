@@ -55,22 +55,13 @@ public class EventManager : MonoBehaviour {
 	{
 		if(eventID != null)
 		{
-			Debug.Log("spawning event: " + eventID);
-			Debug.Log("spawning from: " + events);
-			Debug.Log("events.count: " + events.Count);
-			foreach(EventCard e in events)
-			{
-				Debug.Log("eventid: " + e.getID());
-			}
 			EventCard eventToSpawn = events.Find(x => x.getID() == eventID);
-			Debug.Log("called spawn event: " + eventToSpawn);
-			//EventCard eventToSpawn = events.Find(x => (x.getID() == eventID));
+	
 			if(eventToSpawn == null)
 				return;
 
 			
-			spawnEvent(eventToSpawn);
-			Debug.Log("called spawn event: " + eventToSpawn);
+			spawnEvent(eventToSpawn);			
 			storyEvents.Remove(eventToSpawn);
 			spentStoryEvents.Add(eventToSpawn);
 

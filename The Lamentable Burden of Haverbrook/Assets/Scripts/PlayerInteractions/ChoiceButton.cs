@@ -43,25 +43,52 @@ public class ChoiceButton : Button {
             return; */
 
         if(changeSuspicion)        
-            GameManager.gameDaddy.setSuspicion(suspicionValue);        
+        {
+            GameManager.gameDaddy.setSuspicion(suspicionValue);
+            FeedBackManager.feedDaddy.spawnFeedbackText(transform, "Suspicion", suspicionValue);
+        }
+            
 
         if(changeHappiness)
+        {
             GameManager.gameDaddy.setHappiness(happinessValue);
+            FeedBackManager.feedDaddy.spawnFeedbackText(transform, "Happiness", happinessValue);
+        }
+            
         
         if(changePopulation)
+        {
             GameManager.gameDaddy.setPopulation(populationValue);
+            FeedBackManager.feedDaddy.spawnFeedbackText(transform, "Population", populationValue);
+        }
+            
         
         if(changeFanatacism)
+        {
             GameManager.gameDaddy.setFanaticism(fanatacismValue);
+            FeedBackManager.feedDaddy.spawnFeedbackText(transform, "Fanatacism", fanatacismValue);
+        }
+            
 
         if(changeHunger)
+        {
             GameManager.gameDaddy.setHunger(hungerValue);
+            FeedBackManager.feedDaddy.spawnFeedbackText(transform, "Hunger", hungerValue);
+        }
+            
 
         if(changeCows)
+        {
             GameManager.gameDaddy.setCow(cowValue);
+            FeedBackManager.feedDaddy.spawnFeedbackText(transform, "Cow", cowValue);
+        }
+            
 
         if(changeBlood)
+        {
             GameManager.gameDaddy.setBloodCount((int)bloodValue);
+            FeedBackManager.feedDaddy.spawnFeedbackText(transform, "Blood", bloodValue);
+        }            
 
         this.interactable = false;
         Invoke("reEnableButton", timeValue);
@@ -69,6 +96,8 @@ public class ChoiceButton : Button {
         Debug.Log("parent: " + transform.parent.root);
 
         cardParent.buttonPressed(timeValue, this);
+
+
     }
 
     public virtual void reEnableButton()
