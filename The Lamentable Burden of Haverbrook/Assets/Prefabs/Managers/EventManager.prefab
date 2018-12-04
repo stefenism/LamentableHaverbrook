@@ -67,5 +67,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyEvents:
-  - {fileID: 114284978798318962, guid: c6aa583597528274c9e74b2e30670dba, type: 2}
+  - {fileID: 114567394513493944, guid: 12d6be9cd816efa4b904a76a46d637b8, type: 2}
+  - {fileID: 114174780421087872, guid: 5e96c4bd0123ed249a6b94aa1dbb1ddf, type: 2}
+  - {fileID: 114808715228524938, guid: 0a7ba4eeb951cd442be6a43b8081aeb8, type: 2}
+  - {fileID: 114045216667150630, guid: 042a1b59034619b44adf4dd0ecd79c56, type: 2}
+  - {fileID: 114410245676837170, guid: b7bd1f7551507a44286def884b9c4343, type: 2}
+  - {fileID: 114369260476618638, guid: 39fcb4c7cd01d8c47999d1d60351ab65, type: 2}
+  - {fileID: 114466084607075664, guid: 23f2d93b357dff846958dbc23712c927, type: 2}
+  - {fileID: 114305585393660722, guid: 15cb8e57901d9bb49be3674c373c44f1, type: 2}
+  - {fileID: 114922800912939450, guid: a85dfbe78a832e5459e3410fe134f1f1, type: 2}
+  - {fileID: 114634557667212504, guid: c90880c4177fa584a89def1f03f6541b, type: 2}
+  - {fileID: 114916129306901626, guid: 278e5f42e9967a746bcc3593bb45e018, type: 2}
+  - {fileID: 114443620170101312, guid: abd9170fe1141a2418b8b72ce235f368, type: 2}
+  - {fileID: 114086172877345518, guid: 70bb01e7a1e74844f905b81f341995ef, type: 2}
+  - {fileID: 114191290574895412, guid: f7116cacc95b353419d64473e79eb5c3, type: 2}
+  - {fileID: 114239020131073986, guid: c624dc3ad09b3ba4a88da45d9044617f, type: 2}
+  - {fileID: 114799154112245242, guid: 129414fed1fe58e40a39cda0bdaab59f, type: 2}
+  - {fileID: 114928373121349084, guid: 1d004b4d2f3d16348b14063a2360bda4, type: 2}
+  - {fileID: 114942126864162684, guid: c2b47d10b3ed79b48a88dda315256167, type: 2}
   spentStoryEvents: []

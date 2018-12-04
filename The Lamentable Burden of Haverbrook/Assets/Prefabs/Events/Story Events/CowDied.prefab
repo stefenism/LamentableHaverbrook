@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 114172790880915142}
   - component: {fileID: 223402714970177972}
   - component: {fileID: 114405498958285798}
+  - component: {fileID: 114907715659738442}
   m_Layer: 0
   m_Name: testButton (1)
   m_TagString: Untagged
@@ -406,6 +407,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114907715659738442}
+        m_MethodName: setCowDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   tooltipText: 
@@ -414,12 +426,16 @@ MonoBehaviour:
   changePopulation: 0
   changeFanatacism: 0
   changeHunger: 0
+  changeBlood: 0
+  changeCows: 0
   suspicionValue: 15
   happinessValue: 15
   populationValue: 15
   fanatacismValue: 15
   hungerValue: 15
   timeValue: 3
+  cowValue: 0
+  bloodValue: 0
 --- !u!114 &114312809131149440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -500,12 +516,16 @@ MonoBehaviour:
   changePopulation: 1
   changeFanatacism: 1
   changeHunger: 1
+  changeBlood: 0
+  changeCows: 0
   suspicionValue: 15
   happinessValue: 15
   populationValue: 15
   fanatacismValue: 15
   hungerValue: 15
   timeValue: 3
+  cowValue: 0
+  bloodValue: 0
 --- !u!114 &114330209296435912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -775,6 +795,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114907715659738442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1417041682744464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c195693329ff48488178c865eae2d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114952705142654516
 MonoBehaviour:
   m_ObjectHideFlags: 1

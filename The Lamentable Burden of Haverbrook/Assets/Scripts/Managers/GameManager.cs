@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
 	private Descriptors descriptors;
 	//STATS
 	private float Suspicion = 0;
-	private float Happiness = 0;
+	private float Happiness = 65;
 	private float Population = 0;
 	private float Fanatacism = 0;
 	private float Hunger = 5;
