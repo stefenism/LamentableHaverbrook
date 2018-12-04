@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 222973300478934140}
   - component: {fileID: 114634885335472950}
   - component: {fileID: 114486595950342786}
+  - component: {fileID: 114698705018874782}
   m_Layer: 0
   m_Name: FeedItBlood-BarnLvl1
   m_TagString: Untagged
@@ -173,6 +174,42 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1475722861962104
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224748847394687272}
+  - component: {fileID: 222169893707028998}
+  - component: {fileID: 114403995029168782}
+  - component: {fileID: 114201947790348538}
+  - component: {fileID: 114469038991059528}
+  m_Layer: 0
+  m_Name: FeedItCow-BarnLvl1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &1628202203277960
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224832982945637606}
+  - component: {fileID: 222912755952931248}
+  - component: {fileID: 114713303292178216}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1663220355790284
 GameObject:
   m_ObjectHideFlags: 1
@@ -240,6 +277,7 @@ GameObject:
   - component: {fileID: 114836836388121690}
   - component: {fileID: 223880988684548208}
   - component: {fileID: 114248761854007832}
+  - component: {fileID: 95213918854908562}
   m_Layer: 0
   m_Name: barnBuilding
   m_TagString: Untagged
@@ -274,6 +312,24 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 72312b69284fcea44acffc726eba41d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95213918854908562
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1885539442893046}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28bf01be6c378a245b78e350427b9bf6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -513,6 +569,85 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114201947790348538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475722861962104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e8da738cfbae446a14b07b2731e846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.8396226, g: 0.83170164, b: 0.83170164, a: 1}
+    m_PressedColor: {r: 0.6132076, g: 0.5958527, b: 0.5958527, a: 1}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 114403995029168782}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114201947790348538}
+        m_MethodName: pressButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114469038991059528}
+        m_MethodName: setCowDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  tooltipText: 
+  changeSuspicion: 0
+  changeHappiness: 0
+  changePopulation: 0
+  changeFanatacism: 0
+  changeHunger: 1
+  changeBlood: 0
+  changeCows: 1
+  suspicionValue: 15
+  happinessValue: 15
+  populationValue: 15
+  fanatacismValue: 15
+  hungerValue: -1
+  timeValue: 5
+  cowValue: -1
+  bloodValue: 1
 --- !u!114 &114215017941798632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -524,9 +659,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719c7ebb160f9a74db7d5f911e58a5a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: 'Last time you checked the Monster was: '
+  status: 'The Monster is '
+  status2: Cows
   statusText: {fileID: 114533279837395964}
-  statusText2: {fileID: 0}
 --- !u!114 &114248761854007832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -587,6 +722,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bdab45b27e30e64fa83d58dab8f2bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114403995029168782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475722861962104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &114411538049637760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -627,6 +789,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 1
+--- !u!114 &114469038991059528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475722861962104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c195693329ff48488178c865eae2d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114486595950342786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -684,14 +857,14 @@ MonoBehaviour:
   changeHappiness: 0
   changePopulation: 0
   changeFanatacism: 0
-  changeHunger: 0
+  changeHunger: 1
   changeBlood: 1
   changeCows: 0
   suspicionValue: 15
   happinessValue: 15
   populationValue: 15
   fanatacismValue: 15
-  hungerValue: 15
+  hungerValue: -1
   timeValue: 5
   cowValue: 0
   bloodValue: 1
@@ -906,6 +1079,53 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114698705018874782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047915870836748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328ca599e70c8d14a80342c36b3aceb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonToEnable: {fileID: 114201947790348538}
+  parentCard: {fileID: 114001309059062108}
+  secondsToEnable: 0
+--- !u!114 &114713303292178216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1628202203277960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b2c9e082598b22844aee7bf0c16e8229, type: 3}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Feed it Cow Blood
 --- !u!114 &114757173143431790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -965,9 +1185,7 @@ MonoBehaviour:
   - {fileID: 114284978798318962, guid: c6aa583597528274c9e74b2e30670dba, type: 2}
   spentEvents: []
   choiceCards:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 114001309059062108}
 --- !u!114 &114836836388121690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1128,6 +1346,13 @@ MonoBehaviour:
   timeValue: 10
   cowValue: 1
   bloodValue: 0
+--- !u!222 &222169893707028998
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475722861962104}
+  m_CullTransparentMesh: 0
 --- !u!222 &222258827397388790
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -1197,6 +1422,13 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1098322558770768}
+  m_CullTransparentMesh: 0
+--- !u!222 &222912755952931248
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1628202203277960}
   m_CullTransparentMesh: 0
 --- !u!222 &222973300478934140
 CanvasRenderer:
@@ -1392,6 +1624,7 @@ RectTransform:
   - {fileID: 224018736740724034}
   - {fileID: 224866923405525360}
   - {fileID: 224407055455235490}
+  - {fileID: 224748847394687272}
   m_Father: {fileID: 224294642216371636}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1492,6 +1725,43 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -653.6, y: -332.8}
   m_SizeDelta: {x: 300, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224748847394687272
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475722861962104}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.97375154, y: 1, z: 1}
+  m_Children:
+  - {fileID: 224832982945637606}
+  m_Father: {fileID: 224439719972670616}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 135.8, y: -213.892}
+  m_SizeDelta: {x: 260, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224832982945637606
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1628202203277960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224748847394687272}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224866923405525360
 RectTransform:

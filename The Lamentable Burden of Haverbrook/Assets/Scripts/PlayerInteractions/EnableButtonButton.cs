@@ -13,6 +13,7 @@ public class EnableButtonButton : MonoBehaviour {
 		if(buttonToEnable.gameObject.activeSelf)
 			return;
 
+		Debug.Log("made it here enable button");
 		buttonToEnable.gameObject.SetActive(true);
 		buttonToEnable.interactable = false;
 		parentCard.updateButtons(buttonToEnable);

@@ -63,10 +63,12 @@ public class StoryEvents : MonoBehaviour {
 		CheckAllBuildings();
 	}
 
+
 	void CheckField()
 	{
 		if(GameManager.gameDaddy.getBlood() >= 3 && !cowDead)
 		{
+			Debug.Log("cow died");
 			EventManager.eventMomma.drawCard(EventManager.eventMomma.storyEvents, COWDIED_EVENT_NAME);
 			cowDead = true;
 		}			
@@ -224,6 +226,7 @@ public class StoryEvents : MonoBehaviour {
 
 	public void Update()
 	{
+		CheckEvents();
 		/* if(Input.GetKeyDown(KeyCode.E))
 		{
 			Debug.Log("pressed key");
