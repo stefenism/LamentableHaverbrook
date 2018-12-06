@@ -41,7 +41,7 @@ public class Drawer : MonoBehaviour {
 		status = GetComponentInChildren<Status>();
 		status.initialize(primaryStat);
 
-		AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.menuOpen, 1);
+		AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.menuOpen, 25);
 
 	}
 
@@ -56,7 +56,7 @@ public class Drawer : MonoBehaviour {
 		anim.SetBool(OPEN_DRAWER_ANIM_STRING, false);
 		building.closeBuilding();
 
-		AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.menuClose, 1);
+		AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.menuClose, 25);
 	}
 
 	public void drawerClosed()

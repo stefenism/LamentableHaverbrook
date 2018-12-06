@@ -253,6 +253,8 @@ GameObject:
   - component: {fileID: 222666082920978072}
   - component: {fileID: 114972075561832994}
   - component: {fileID: 114565878901841238}
+  - component: {fileID: 114288268235240444}
+  - component: {fileID: 114464924869521732}
   m_Layer: 0
   m_Name: PoliceBtnLvl2_Deal
   m_TagString: Untagged
@@ -891,6 +893,17 @@ MonoBehaviour:
   timeValue: 10
   cowValue: 1
   bloodValue: 0
+--- !u!114 &114288268235240444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1526075013872292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3e3509583a6ff4281fea947d3a3014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114301589395680556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1222,6 +1235,17 @@ MonoBehaviour:
   timeValue: 10
   cowValue: 0
   bloodValue: 0
+--- !u!114 &114464924869521732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1526075013872292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e814f2a8c7afeaf4e8da9cb97f334735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114473340340622446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1374,6 +1398,28 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114565878901841238}
         m_MethodName: pressButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114464924869521732}
+        m_MethodName: triggerPoliceDeal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114288268235240444}
+        m_MethodName: disableOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

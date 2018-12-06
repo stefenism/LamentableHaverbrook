@@ -744,7 +744,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardLevel: 0
   anim: {fileID: 0}
-  eventManager: {fileID: 0}
   ID: Town
 --- !u!114 &114695000211444514
 MonoBehaviour:
@@ -1019,7 +1018,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!223 &223778850176743108
 Canvas:

@@ -455,12 +455,16 @@ MonoBehaviour:
   changePopulation: 0
   changeFanatacism: 1
   changeHunger: 0
+  changeBlood: 0
+  changeCows: 0
   suspicionValue: 15
   happinessValue: 15
   populationValue: 15
   fanatacismValue: 2
   hungerValue: 15
   timeValue: 0
+  cowValue: 0
+  bloodValue: 0
 --- !u!114 &114312046301533370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -677,12 +681,16 @@ MonoBehaviour:
   changePopulation: 0
   changeFanatacism: 0
   changeHunger: 0
+  changeBlood: 0
+  changeCows: 0
   suspicionValue: 15
   happinessValue: 2
   populationValue: 15
   fanatacismValue: 15
   hungerValue: 15
   timeValue: 0
+  cowValue: 0
+  bloodValue: 0
 --- !u!114 &114391960371825634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -990,7 +998,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!223 &223578145285439408
 Canvas:

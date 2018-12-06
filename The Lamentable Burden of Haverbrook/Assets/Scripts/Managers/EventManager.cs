@@ -38,6 +38,7 @@ public class EventManager : MonoBehaviour {
 
 	public void checkDraw()
 	{
+		/*
 		int roll = Random.Range(0, 100);
 		if(roll <= drawCardChance + missedDraw)
 		{
@@ -49,6 +50,7 @@ public class EventManager : MonoBehaviour {
 		{
 			missedDraw++;
 		}
+		*/
 	}
 
 	public void drawCard(List<EventCard> events, string eventID = null)

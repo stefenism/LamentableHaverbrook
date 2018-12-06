@@ -97,6 +97,8 @@ public class ChoiceButton : Button {
 
         cardParent.buttonPressed(timeValue, this);
 
+        AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.menuOpen, 25);
+
 
     }
 

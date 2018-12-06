@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 114603859804670534}
   - component: {fileID: 114449449312811752}
   - component: {fileID: 114679643990373938}
+  - component: {fileID: 114766718974766384}
   m_Layer: 0
   m_Name: CityBtnLvl2_Politics
   m_TagString: Untagged
@@ -1154,7 +1155,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bribe Officials
+  m_Text: Buy Cow
 --- !u!114 &114312840288220872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1478,6 +1479,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 114679643990373938}
         m_MethodName: runForOffice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114766718974766384}
+        m_MethodName: disableOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1895,6 +1907,17 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &114766718974766384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1337651409862392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3e3509583a6ff4281fea947d3a3014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114786630527035332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1955,6 +1978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specialButton: {fileID: 114449449312811752}
+  disableButton: {fileID: 0}
 --- !u!114 &114876671733125026
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 224626255484130814}
   - component: {fileID: 222376955172040248}
   - component: {fileID: 114471785627402178}
+  - component: {fileID: 223330656640419422}
   m_Layer: 0
   m_Name: TitleText
   m_TagString: Untagged
@@ -73,6 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224998144331738448}
   - component: {fileID: 114310180752558748}
+  - component: {fileID: 223823420053361588}
   m_Layer: 0
   m_Name: Vertical Layout Group
   m_TagString: Untagged
@@ -143,6 +145,7 @@ GameObject:
   - component: {fileID: 224095459320365724}
   - component: {fileID: 222818435404268734}
   - component: {fileID: 114432545322478386}
+  - component: {fileID: 223978974067520450}
   m_Layer: 0
   m_Name: Image (1)
   m_TagString: Untagged
@@ -160,6 +163,7 @@ GameObject:
   - component: {fileID: 224651579515898786}
   - component: {fileID: 222930734758898322}
   - component: {fileID: 114926605544219226}
+  - component: {fileID: 223547776753346344}
   m_Layer: 0
   m_Name: Body Text
   m_TagString: Untagged
@@ -348,12 +352,16 @@ MonoBehaviour:
   changePopulation: 0
   changeFanatacism: 0
   changeHunger: 0
+  changeBlood: 0
+  changeCows: 0
   suspicionValue: 15
   happinessValue: 15
   populationValue: 15
   fanatacismValue: 15
   hungerValue: 15
   timeValue: 3
+  cowValue: 0
+  bloodValue: 0
 --- !u!114 &114296318552315476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -415,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardLevel: 0
-  anim: {fileID: 0}
+  anim: {fileID: 95023047145562110}
   ID: StartingStory
 --- !u!114 &114343177576857986
 MonoBehaviour:
@@ -568,12 +576,16 @@ MonoBehaviour:
   changePopulation: 0
   changeFanatacism: 0
   changeHunger: 0
+  changeBlood: 0
+  changeCows: 0
   suspicionValue: 15
   happinessValue: 15
   populationValue: 15
   fanatacismValue: 15
   hungerValue: 15
   timeValue: 3
+  cowValue: 0
+  bloodValue: 0
 --- !u!114 &114432545322478386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -969,11 +981,31 @@ Canvas:
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
+  m_OverridePixelPerfect: 1
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 1
+  m_TargetDisplay: 0
+--- !u!223 &223330656640419422
+Canvas:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1309860475477076}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 680
   m_TargetDisplay: 0
 --- !u!223 &223333654213091772
 Canvas:
@@ -1034,6 +1066,66 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!223 &223547776753346344
+Canvas:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1825165603281480}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 25
+  m_TargetDisplay: 0
+--- !u!223 &223823420053361588
+Canvas:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1311916682342276}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 25
+  m_TargetDisplay: 0
+--- !u!223 &223978974067520450
+Canvas:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695883706985616}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 25
   m_TargetDisplay: 0
 --- !u!224 &224020821183348454
 RectTransform:

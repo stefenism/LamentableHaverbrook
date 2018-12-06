@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114074617782998438}
   - component: {fileID: 114665024936879358}
   - component: {fileID: 114098469613113734}
+  - component: {fileID: 114116400944856840}
   m_Layer: 0
   m_Name: BarButtonLvl2_BribeBarOwner
   m_TagString: Untagged
@@ -836,6 +837,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d3ae2533dd4114590a8185d773be19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114116400944856840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1005825125849668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3e3509583a6ff4281fea947d3a3014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114124238209420962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -848,6 +860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specialButton: {fileID: 114665024936879358}
+  disableButton: {fileID: 0}
 --- !u!114 &114127409298785752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1092,7 +1105,7 @@ MonoBehaviour:
   changeHunger: 0
   changeBlood: 0
   changeCows: 0
-  suspicionValue: 1
+  suspicionValue: -1
   happinessValue: 15
   populationValue: 15
   fanatacismValue: 15
@@ -1548,6 +1561,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 114098469613113734}
         m_MethodName: buyBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114116400944856840}
+        m_MethodName: disableOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

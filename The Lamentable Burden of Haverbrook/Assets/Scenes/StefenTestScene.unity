@@ -879,6 +879,26 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114926605544219226, guid: 28dd056f66851484980f5d2b7b363eb2,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114926605544219226, guid: 28dd056f66851484980f5d2b7b363eb2,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471785627402178, guid: 28dd056f66851484980f5d2b7b363eb2,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471785627402178, guid: 28dd056f66851484980f5d2b7b363eb2,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224999125410771550, guid: 28dd056f66851484980f5d2b7b363eb2,
         type: 2}
       propertyPath: m_AnchorMin.y
@@ -919,11 +939,6 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114322476800596750, guid: 28dd056f66851484980f5d2b7b363eb2,
-        type: 2}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 1337495307}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28dd056f66851484980f5d2b7b363eb2, type: 2}
   m_IsPrefabAsset: 0
@@ -1185,6 +1200,16 @@ Prefab:
       propertyPath: bgMusicClips.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 39b92268098b11a4bb8c9cc982e762d9, type: 3}
+    - target: {fileID: 82278717208156178, guid: 8dfebadd37886684d92764d7728c8668,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 82200765301083896, guid: 8dfebadd37886684d92764d7728c8668,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dfebadd37886684d92764d7728c8668, type: 2}
   m_IsPrefabAsset: 0
@@ -1359,11 +1384,6 @@ Canvas:
 --- !u!224 &1337495306 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224020821183348454, guid: 28dd056f66851484980f5d2b7b363eb2,
-    type: 2}
-  m_PrefabInternal: {fileID: 614406160}
---- !u!95 &1337495307 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95023047145562110, guid: 28dd056f66851484980f5d2b7b363eb2,
     type: 2}
   m_PrefabInternal: {fileID: 614406160}
 --- !u!1001 &1359052084

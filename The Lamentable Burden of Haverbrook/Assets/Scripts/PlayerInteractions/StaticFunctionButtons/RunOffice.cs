@@ -6,6 +6,6 @@ public class RunOffice : MonoBehaviour {
 
 	public void runForOffice()
 	{
-		EventManager.eventMomma.getStoryEvents().triggerCityTwo();
+		EventManager.eventMomma.getStoryEvents().triggerCityTwo();		
 	}
 }

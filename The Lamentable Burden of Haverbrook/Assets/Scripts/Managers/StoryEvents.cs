@@ -95,6 +95,9 @@ public class StoryEvents : MonoBehaviour {
 		{
 			EventManager.eventMomma.drawCard(EventManager.eventMomma.storyEvents, CHURCH1_EVENT_NAME);
 			churchQuired = true;
+
+			GameManager.gameDaddy.churchBuilding.gameObject.SetActive(true);
+			AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.newBuilding, 1);
 		}
 
 		if(GameManager.gameDaddy.getFanatacism() >= 60 && churchQuired && !churchLevelTwo)
@@ -116,9 +119,12 @@ public class StoryEvents : MonoBehaviour {
 		{
 			EventManager.eventMomma.drawCard(EventManager.eventMomma.storyEvents, CITY_HALL1_EVENT_NAME);
 			cityQuired = true;
+
+			GameManager.gameDaddy.cityBuilding.gameObject.SetActive(true);
+			AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.newBuilding, 1);
 		}
 
-		if(GameManager.gameDaddy.getPopulation() >= 40 && !cityLevelTwo)
+		if(GameManager.gameDaddy.getPopulation() >= 40 && !cityLevelTwo && cityQuired)
 		{
 			GameManager.gameDaddy.cityBuilding.getDrawer().enableLevelTwoCards();
 			cityLevelTwo = true;
@@ -131,6 +137,9 @@ public class StoryEvents : MonoBehaviour {
 		{
 			EventManager.eventMomma.drawCard(EventManager.eventMomma.storyEvents, POLICE1_EVENT_NAME);
 			policeQuired = true;
+
+			GameManager.gameDaddy.policeBuilding.gameObject.SetActive(true);
+			AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.newBuilding, 1);
 		}			
 
 		if(GameManager.gameDaddy.getFanatacism() >= 30 && !policeLevelTwo && policeQuired)
@@ -175,7 +184,7 @@ public class StoryEvents : MonoBehaviour {
 	}
 	public void triggerBar()
 	{
-		StartCoroutine(triggerBarEvent(30));
+		StartCoroutine(triggerBarEvent(10));
 	}
 
 	public void triggerStart()
@@ -287,7 +296,7 @@ public class StoryEvents : MonoBehaviour {
 		//make bar visible activated
 		//play nw building sound
 		GameManager.gameDaddy.barBuilding.gameObject.SetActive(true);
-		AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.newBuilding, 10);
+		AudioManager.PlaySound(AudioManager.instance.sfxSource, AudioManager.instance.newBuilding, 1);
 		
 		//lose town todo
 		//GameManager.gameDaddy.loseTown();

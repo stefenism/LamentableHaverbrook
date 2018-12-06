@@ -367,6 +367,8 @@ GameObject:
   - component: {fileID: 222143376028593878}
   - component: {fileID: 114701005967145382}
   - component: {fileID: 114736277924339442}
+  - component: {fileID: 114353564513810670}
+  - component: {fileID: 114528749683442450}
   m_Layer: 0
   m_Name: ChurchBtnLvl2_Convert
   m_TagString: Untagged
@@ -1663,6 +1665,17 @@ MonoBehaviour:
   timeValue: 20
   cowValue: 0
   bloodValue: 0
+--- !u!114 &114353564513810670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1575754404593652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 216bc2970ddcd7f4281c4a69e53dbecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114372504378048566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2025,6 +2038,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Gather Cultists
+--- !u!114 &114528749683442450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1575754404593652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3e3509583a6ff4281fea947d3a3014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114532511057125962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2509,6 +2533,28 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114736277924339442}
         m_MethodName: pressButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114353564513810670}
+        m_MethodName: convertChurch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114528749683442450}
+        m_MethodName: disableOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
